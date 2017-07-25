@@ -12,6 +12,7 @@
 		07749CF01F279A7E0008D551 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07749CEF1F279A7E0008D551 /* RoundButton.swift */; };
 		07749CF21F279C4D0008D551 /* FancyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07749CF11F279C4D0008D551 /* FancyField.swift */; };
 		07749CF41F279F4D0008D551 /* FancyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07749CF31F279F4D0008D551 /* FancyButton.swift */; };
+		0779BA4F1F2803FF00105132 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0779BA4E1F2803FF00105132 /* FeedVC.swift */; };
 		07BE856B1F2653BA00D53A22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BE856A1F2653BA00D53A22 /* AppDelegate.swift */; };
 		07BE856D1F2653BA00D53A22 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BE856C1F2653BA00D53A22 /* SignInVC.swift */; };
 		07BE85701F2653BA00D53A22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07BE856E1F2653BA00D53A22 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 		07749CF11F279C4D0008D551 /* FancyField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyField.swift; sourceTree = "<group>"; };
 		07749CF31F279F4D0008D551 /* FancyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyButton.swift; sourceTree = "<group>"; };
 		07749CF51F27AFBC0008D551 /* SciSocial.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SciSocial.entitlements; sourceTree = "<group>"; };
+		0779BA4E1F2803FF00105132 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		07BE85671F2653BA00D53A22 /* SciSocial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SciSocial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07BE856A1F2653BA00D53A22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07BE856C1F2653BA00D53A22 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				07BE856C1F2653BA00D53A22 /* SignInVC.swift */,
+				0779BA4E1F2803FF00105132 /* FeedVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -179,7 +182,7 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
@@ -274,6 +277,7 @@
 				07BE856D1F2653BA00D53A22 /* SignInVC.swift in Sources */,
 				07749CF01F279A7E0008D551 /* RoundButton.swift in Sources */,
 				07749CF41F279F4D0008D551 /* FancyButton.swift in Sources */,
+				0779BA4F1F2803FF00105132 /* FeedVC.swift in Sources */,
 				07BE856B1F2653BA00D53A22 /* AppDelegate.swift in Sources */,
 				07749CEB1F2796620008D551 /* FancyView.swift in Sources */,
 				07749CEE1F2797F20008D551 /* Constants.swift in Sources */,
@@ -402,6 +406,7 @@
 			baseConfigurationReference = 937049E927005470138F146C /* Pods-SciSocial.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SciSocial/SciSocial.entitlements;
 				DEVELOPMENT_TEAM = CG7B5K87R2;
 				INFOPLIST_FILE = SciSocial/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -417,6 +422,7 @@
 			baseConfigurationReference = 03DB3353EF07F8B7C6B7C72F /* Pods-SciSocial.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SciSocial/SciSocial.entitlements;
 				DEVELOPMENT_TEAM = CG7B5K87R2;
 				INFOPLIST_FILE = SciSocial/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
