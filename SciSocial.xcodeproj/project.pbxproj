@@ -28,6 +28,7 @@
 		07749CEF1F279A7E0008D551 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		07749CF11F279C4D0008D551 /* FancyField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyField.swift; sourceTree = "<group>"; };
 		07749CF31F279F4D0008D551 /* FancyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyButton.swift; sourceTree = "<group>"; };
+		07749CF51F27AFBC0008D551 /* SciSocial.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SciSocial.entitlements; sourceTree = "<group>"; };
 		07BE85671F2653BA00D53A22 /* SciSocial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SciSocial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07BE856A1F2653BA00D53A22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07BE856C1F2653BA00D53A22 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -81,6 +82,7 @@
 		07BE85691F2653BA00D53A22 /* SciSocial */ = {
 			isa = PBXGroup;
 			children = (
+				07749CF51F27AFBC0008D551 /* SciSocial.entitlements */,
 				07749CEC1F2797E00008D551 /* Utilities */,
 				07BE857E1F26570E00D53A22 /* Model */,
 				07BE857F1F26571700D53A22 /* View */,
@@ -175,6 +177,11 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = CG7B5K87R2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -395,8 +402,10 @@
 			baseConfigurationReference = 937049E927005470138F146C /* Pods-SciSocial.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SciSocial/SciSocial.entitlements;
 				DEVELOPMENT_TEAM = CG7B5K87R2;
 				INFOPLIST_FILE = SciSocial/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.berishaerblin.SciSocial;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -409,8 +418,10 @@
 			baseConfigurationReference = 03DB3353EF07F8B7C6B7C72F /* Pods-SciSocial.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SciSocial/SciSocial.entitlements;
 				DEVELOPMENT_TEAM = CG7B5K87R2;
 				INFOPLIST_FILE = SciSocial/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.berishaerblin.SciSocial;
 				PRODUCT_NAME = "$(TARGET_NAME)";
