@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -89,7 +88,7 @@
                                         <rect key="frame" x="0.0" y="47.5" width="283" height="32.5"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t1v-fV-Ou7" customClass="FancyButton" customModule="SciSocial" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="95" width="283" height="32"/>
@@ -98,6 +97,9 @@
                                         <state key="normal" title="Sign In">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="signInTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Uv-Te-8uQ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -122,6 +124,10 @@
                             <constraint firstItem="s8N-7C-waW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ykv-YC-bua"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="tFe-YS-oHq" id="VAw-nN-ZQ4"/>
+                        <outlet property="pwdField" destination="1eM-Ad-6OV" id="O5h-Cx-fCR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
