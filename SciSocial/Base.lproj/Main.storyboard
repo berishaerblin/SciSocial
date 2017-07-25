@@ -36,7 +36,7 @@
                                     <constraint firstItem="phG-y2-qii" firstAttribute="centerY" secondItem="ONO-uf-QOf" secondAttribute="centerY" id="bzC-OV-EeV"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eVj-pK-w0h">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eVj-pK-w0h" customClass="FancyView" customModule="SciSocial" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="592" width="375" height="75"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you haven't signed in before, an account will be automatically created for you." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PQJ-Lq-ABB">
@@ -72,6 +72,9 @@
                                     <constraint firstAttribute="height" constant="150" id="qWr-Uf-ZIk"/>
                                 </constraints>
                                 <state key="normal" image="f"/>
+                                <connections>
+                                    <action selector="facebookBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bkx-9x-shW"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="pdm-fn-OJI">
                                 <rect key="frame" x="46" y="399" width="283" height="127"/>
