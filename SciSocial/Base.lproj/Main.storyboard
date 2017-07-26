@@ -149,12 +149,16 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kxC-IK-oUS" customClass="FancyView" customModule="SciSocial" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sign-out" translatesAutoresizingMaskIntoConstraints="NO" id="tgl-xC-3Wf">
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sign-out" translatesAutoresizingMaskIntoConstraints="NO" id="tgl-xC-3Wf">
                                         <rect key="frame" x="16" y="20" width="45" height="38"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="38" id="O6m-tF-z5T"/>
                                             <constraint firstAttribute="width" constant="45" id="hRs-N1-SMd"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="stn-5D-hNB" appends="YES" id="qcQ-u7-Yqr"/>
+                                        </connections>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxB-FP-umB">
                                         <rect key="frame" x="157.5" y="21" width="59.5" height="36"/>
@@ -181,6 +185,7 @@
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="bkH-7Z-zDv" customClass="CircleView" customModule="SciSocial" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="49" height="49"/>
                                                 <color key="backgroundColor" red="0.0" green="0.51372549020000002" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="49" id="ev1-Jo-jJZ"/>
                                                     <constraint firstAttribute="height" constant="49" id="qhD-WS-jgf"/>
@@ -344,6 +349,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wwy-kr-F7g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="stn-5D-hNB">
+                    <connections>
+                        <action selector="signOutTapped:" destination="mL4-dC-3Hl" id="rPe-RK-GGI"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="909.60000000000002" y="122.78860569715144"/>
         </scene>
