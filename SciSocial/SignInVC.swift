@@ -12,7 +12,7 @@ import FacebookCore
 import FacebookLogin
 import SwiftKeychainWrapper
 
-class SignInVC: UIViewController {
+class SignInVC: UIViewController, UITextFieldDelegate {
 
     
     @IBOutlet weak var emailField: FancyField!
@@ -84,6 +84,11 @@ class SignInVC: UIViewController {
                 }
             })
         }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     func completeSignIn(id: String, userData: Dictionary<String,String>) {
