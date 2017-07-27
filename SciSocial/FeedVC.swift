@@ -62,7 +62,9 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         let post = posts[indexPath.row]
         if let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as? PostCell {
             if let img = FeedVC.imageCache.object(forKey: post.imageUrl as NSString) {
+                DispatchQueue.main.async {
                 cell.configureCell(post: post, img: img)
+                }
                 return cell
             } else {
                 cell.configureCell(post: post, img: nil)
@@ -108,15 +110,35 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
             let imgUid = NSUUID().uuidString
             let metadata = StorageMetadata()
             metadata.contentType = "image/jpeg"
-            DataService.ds.REF_POST_IMAGES.child(imgUid).putData(imgData, metadata: metadata) {(metadata, error) in
+            DataService.ds.REF_POST_IMAGES.child(imgUid).putData(imgData, metadata: metadata) {[weak self](metadata, error) in
                 if error != nil {
                     print("Blinnky: Unable to upload image to Firebase storage")
                 } else {
                     print("Blinky: Successfully uploaded image to Firebase storage")
                     let downloadUrl = metadata?.downloadURL()?.absoluteString
+                    if let url = downloadUrl{
+                        self?.postToFirebase(imgUrl: url)
+                    }
                 }
             }
         }
+    }
+    
+    func postToFirebase(imgUrl: String) {
+        let post: Dictionary<String, AnyObject> = [
+            "caption" : captionField.text as AnyObject,
+            "imageUrl" : imgUrl as AnyObject,
+            "likes": 0 as AnyObject
+        ]
+        
+        let firebasePost = DataService.ds.REF_POSTS.childByAutoId()
+        firebasePost.setValue(post)
+        
+        captionField.text = ""
+        imageSelected = false
+        imageAdd.image = UIImage(named: "add-image")
+        tableView.reloadData()
+        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
