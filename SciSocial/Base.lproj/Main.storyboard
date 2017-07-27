@@ -211,6 +211,9 @@
                                                     <constraint firstAttribute="width" constant="49" id="ow6-eS-Xc6"/>
                                                 </constraints>
                                                 <state key="normal" image="add-post"/>
+                                                <connections>
+                                                    <action selector="postBtnTapped:" destination="mL4-dC-3Hl" eventType="touchUpInside" id="5dc-nd-oge"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -268,7 +271,7 @@
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ezM-kd-ykG">
                                                                     <rect key="frame" x="0.0" y="70" width="327" height="261"/>
                                                                     <subviews>
-                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="H27-ND-rf7">
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H27-ND-rf7">
                                                                             <rect key="frame" x="0.0" y="0.0" width="327" height="181"/>
                                                                         </imageView>
                                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HgH-Dm-jIU">
@@ -348,6 +351,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="captionField" destination="tvn-Gv-srk" id="Vfi-LA-vio"/>
                         <outlet property="imageAdd" destination="bkH-7Z-zDv" id="6fc-t2-KiY"/>
                         <outlet property="tableView" destination="Jp7-tR-0Ue" id="t1K-0X-ryu"/>
                     </connections>
@@ -373,7 +377,6 @@
         <image name="devslopes-logo" width="150" height="94"/>
         <image name="empty-heart" width="70" height="70"/>
         <image name="f" width="352" height="328"/>
-        <image name="placeholder" width="567" height="312"/>
         <image name="profile1" width="1080" height="1920"/>
         <image name="sign-out" width="92" height="65"/>
     </resources>
