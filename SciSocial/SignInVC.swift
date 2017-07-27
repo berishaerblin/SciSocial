@@ -29,6 +29,14 @@ class SignInVC: UIViewController, UITextFieldDelegate {
             performSegue(withIdentifier: "goToFeed", sender: nil)
         }
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        emailField.text = nil
+        pwdField.text = nil
+    }
+    
+    
     @IBAction func facebookBtnTapped(_ sender: Any) {
         let loginManager = LoginManager()
         loginManager.logIn([ .publicProfile ], viewController: self) { loginResult in
